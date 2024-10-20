@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pymonics Signal Analyzer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+        <style>
+            .sample-box {
+                font-size: 15px;
+                height: 30px;
+                width: 210px;
+            }
+            
+            .text {
+                font-family: Rethink Sans;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .text2 {
+                font-family: Rethink Sans;
+                font-size: 18px;
+                text-align: center;
+            }
+            .sample1 {
+                font-family: Rethink Sans;
+                display: inline-block;
+                font-size: 22px;
+                font-weight: bold;
+                margin-right: 10px;
+                margin-left: 100px;
+            }
+            .sample2 {
+                font-family: Rethink Sans;
+                display: inline-block;
+                font-size: 22px;
+                font-weight: bold;
+                margin-right: 10px;
+                margin-left: 390px;
+            }
+            .sample3 {
+                background-color: peachpuff;
+                height: 250px;
+                padding-top: 10px;
+                padding-bottom: 30px;
+            }
+            .sample4 {
+                font-family: Rethink Sans;
+                display: inline-block;
+                margin-left: 340px;
+                margin-right: 50px;
+                background-color: rgb(150, 211, 219);
+                border: none;
+                height: 55px;
+                width: 150px;
+                font-size: 20px;
+                border-radius: 10px;
+                font-style: italic;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.15s;
+            }
+            .sample4:hover {
+                background-color:  rgb(126, 181, 187);
+            }
+            .sample4:active {
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+            }
+            .sample5 {
+                text-align: right;
+            }
+            .sample6 {
+                font-size: 25px;
+                font-family: Rethink Sans;
+                font-weight: bold;
+            }
+            .sample7 {
+                margin-right: 20px;     
+                font-family: Rethink Sans;
+            }
+            .sample-box1 {
+                width: 250px;          
+                height: 30px;
+                padding: 5px;
+            }
+            .form-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 20px;
+            }
+
+            .form-row {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .form-row label {
+                width: 180px;
+                font-size: 20px;
+                font-family: Rethink Sans;
+                font-weight: bold;
+                margin-right: 20px;
+            }
+
+            .form-row input {
+                font-size: 16px;
+                height: 30px;
+                width: 210px;
+                padding-left: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <img src="pymonics_header.png" alt="Image" width=" 1425">
+        <div class="sample3">
+        <p class="text">Pymonics is power systems harmonic estimation and filter design package written in Python. </p>
+        <p class="text2">This is a demo application showing capabilities of library. Enter the collected input signal and its sampling frequency to detect frequency components and amplitudes present in the signal.</p>
+        <label for="signal-sample" class="sample1">Signal Sample -</label>
+        <input type="file" id="signal-sample" class="sample-file">
+
+        <p class="sample2">Sampling Frequency -</p>
+        <input class="sample-box"type="text" placeholder="Enter Sampling Frequency (Hz)">
+        <button class="sample4">Try Sample</button>
+        <button class="sample4">Analyse</button>
+        <div class="sample5">
+        <a href="https://pymonics-web.uc.r.appspot.com/static/Help.pdf" target="_blank">Help document for Pymonics tool</a>
+        </div>
+        </div>
+        
+            <p class="sample6">FILTER DESIGN -</p>
+    <div class="form-container">
+        <div class="form-row">
+            <p class="sample7">Tuning Point, <strong>h :</strong></p>
+            <input class="sample-box1"type="text" placeholder="Enter value">
+        </div>
+        <div class="form-row">
+            <p class="sample7">Reactive Power, <strong>Qc :</strong></p>
+            <input class="sample-box1"type="text" placeholder="Enter value">
+        </div>
+        <div class="form-row">
+            <p class="sample7">Quality Factor, <strong>Q :</strong></p>
+            <input class="sample-box1"type="text" placeholder="Enter value">
+        </div>
+        <div class="form-row">
+            <p class="sample7">System Frequency, <strong>f :</strong></p>
+            <input class="sample-box1"type="text" placeholder="Enter value">
+        </div>
+        <div class="form-row">
+            <p class="sample7">System Voltage, <strong>V :</strong></p>
+            <input class="sample-box1"type="text" placeholder="Enter value">
+        </div>
+    </div>
+           
+    </body>
+</html>
